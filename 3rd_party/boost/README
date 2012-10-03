@@ -1,0 +1,21 @@
+
+Code for boosted decision trees or boosted 1D kernel density estimates
+using Adaboost.L algorithm of
+
+M. Collins, R. Schapire, and Y. Singer. Logistic regression, Adaboost, 
+and Bregman distances.  Machine Learning, 48(1-3), 2002.
+
+train_boosted_dt_mc.m - train boosted decision trees (> 2 classes, 1 vs. all)
+train_boosted_dt_2c.m - train boosted decision trees (2 classes)
+test_boosted_dt_mc.m - evaluate features with bdt classfier (works for 2c also)
+ 
+Note: haven't used these in a while or documented lately
+train_boosted_kde_2c.m - train boosted kernel density estimates (2 classes)
+test_boosted_kde_2c.m - test boosted kernel density estimtes (2 classes)
+
+
+Use freely at your own risk.
+
+You may need to recompile treevalc.c (mcc -m treevalc.c) to use test_boosted_dt_mc.  Alternatively, comment out the treevalc line and uncomment the treeval line of test_boosted_dt_mc to run matlab version (slower).
+
+Derek
