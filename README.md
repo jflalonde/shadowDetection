@@ -40,8 +40,8 @@ If you want to make it work on your own image, here's what you should do:
 Requirements
 ============
 
-Required 3rd-party software **not included** in this package
---------------------------------------------------------
+Required 3rd-party software *not included* in this package
+-----------
 
 *  [Lightspeed matlab toolbox](http://research.microsoft.com/en-us/um/people/minka/software/lightspeed/) by Tom Minka, 
    need at least version 2.4.
@@ -55,8 +55,8 @@ folder as the `shadowDetection`, they should be picked up automatically by
 Make sure you follow the respective instructions to install those packages.
 
 
-Required 3rd-party software **included** in this package
-------------------------------------------------------
+Required 3rd-party software *included* in this package
+-----------
 
 In addition, this code uses the following freely-available matlab code: 
 
@@ -67,8 +67,7 @@ In addition, this code uses the following freely-available matlab code:
 *   [Boosted decision tree](http://www.cs.uiuc.edu/homes/dhoiem/) by Derek Hoiem
   
 
-Compilation
------------
+### Compilation ###
 
 Check within each of the following directories and make sure you compile 
 the .mex files. They are required for this software to run:
@@ -83,8 +82,8 @@ the .mex files. They are required for this software to run:
         $ cd 3rd_party/nearestneighbor
         $ mex BruteSearchMex.cpp
 
-Optional 3rd-party software **not included** in this package
---------------------------------------------------------
+Optional 3rd-party software *not included* in this package
+-----------
 
 *   [Geometric context](http://www.cs.uiuc.edu/homes/dhoiem/) by Derek Hoiem.
     
