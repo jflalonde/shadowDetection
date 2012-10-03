@@ -28,4 +28,5 @@ restoredefaultpath;
 %% Setup project paths
 addpath(genpath(pathMyCode));
 addpath(genpath(pathUtils));
+addpath(genpath(getPathName('codeUtilsPrivate')));
 addpath(genpath(path3rdParty));

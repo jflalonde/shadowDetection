@@ -35,6 +35,12 @@ else
         case 'codeUtils'
             path = fullfile(codeBasePath, 'utils');
             
+        case 'codeUtilsPrivate'
+            path = fullfile(codeBasePath, 'utilsPrivate');
+            if ~exist(path, 'dir')
+                warning('Please put the dependencies in a ''utilsPrivate'' directory, or change me!');
+            end
+            
         case 'results'
             path = fullfile(resultsBasePath, projectName);
 

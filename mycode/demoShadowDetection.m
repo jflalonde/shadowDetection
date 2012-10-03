@@ -8,25 +8,12 @@
 % Consult the LICENSE.txt file for licensing information
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Set paths
-addpath('./bfilter2'); % bilateral filtering, from Douglas R. Lanman
-addpath('./astein'); % boundary extraction from Andrew stein
-addpath('./parseArgs'); % argument-parsing library from Malcolm Wood
-addpath('./nearestneighbor'); % mex'ed nearest-neighbor code
-addpath('./boost'); % boosted decision-trees from Derek Hoiem
-addpath('./display'); % display code
-
-%% Third-party paths (see README.txt file)
-thirdPartyPath = '../../../3rd_party'; % replace this with your own directory
-addpath(fullfile(thirdPartyPath, 'lightspeed'));
-addpath(fullfile(thirdPartyPath, 'GCMex1.3'));
-
 %% Load image & information
 verbose = 1;
 imgName = 'img';
 
 % load the image
-imgFilename = fullfile('img', sprintf('%s.jpg', imgName));
+imgFilename = fullfile('data', 'img', sprintf('%s.jpg', imgName));
 img = im2double(imread(imgFilename));
 
 % load the classifier
@@ -37,7 +24,7 @@ useGroundProb = 1;
 if useGroundProb
     % the variable 'groundProb' was pre-computed using geometric context,
     % see README.txt
-    groundProbFilename = fullfile('img', sprintf('%s-groundProb.mat', imgName));
+    groundProbFilename = fullfile('data', 'img', sprintf('%s-groundProb.mat', imgName));
     
     if exist(groundProbFilename, 'file')
         load(groundProbFilename, 'groundProb');
