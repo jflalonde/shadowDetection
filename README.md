@@ -43,6 +43,7 @@ Requirements
 Required 3rd-party software *not included* in this package
 -----------
 
+*  My "utils" package, available at: https://github.com/jflalonde/utils/.
 *  [Lightspeed matlab toolbox](http://research.microsoft.com/en-us/um/people/minka/software/lightspeed/) by Tom Minka, 
    need at least version 2.4.
 *  [Graph cut wrapper](http://www.wisdom.weizmann.ac.il/~bagon/matlab.html) by Shai Bagon
