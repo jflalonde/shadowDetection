@@ -68,7 +68,8 @@ In addition, this code uses the following freely-available matlab code:
 *   [Boosted decision tree](http://www.cs.uiuc.edu/homes/dhoiem/) by Derek Hoiem
   
 
-### Compilation ###
+Compilation
+-----------
 
 Check within each of the following directories and make sure you compile 
 the .mex files. They are required for this software to run:
@@ -87,7 +88,23 @@ Optional 3rd-party software *not included* in this package
 -----------
 
 *   [Geometric context](http://www.cs.uiuc.edu/homes/dhoiem/) by Derek Hoiem.
-    
+  
+
+Tuning the parameters
+==================
+
+There are a few parameters you might want to fiddle with in order to tune the results to your liking. 
+
+* Resize the image to ~600 pixels along the vertical dimension, since computing features is 
+likely to be prohibitively expensive for images of larger size.
+
+* If the algorithm fails to detect shadows that are too soft, try reducing the image size, or modify the 
+Canny edge detection parameters to make it fire on that edge. We are, after all, looking for shadow *edges*. 
+You will find the Canny edge detection call at line 39 of `applyLocalBoundaryClassifier.m`.
+
+* If the detected shadow edges are too discontinuous, you can experiment with the over-segmentation parameters
+to obtain larger, more continuous segments. You will face a trade-off, however: larger segments will be less precise
+at capturing small details. For this, look at `extractImageBoundaries.m` and experiment with the `prctMax` parameter.
 
 News
 ====
